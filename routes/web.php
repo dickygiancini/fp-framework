@@ -25,4 +25,4 @@ Route::get('/about', function () {
 //     return view('listfilm');
 // });
 
-Route::get('/list', 'ListController@home');
+Route::get('/list', 'ListController@index');
