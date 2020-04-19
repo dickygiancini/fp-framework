@@ -21,6 +21,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/list', function () {
-    return view('listfilm');
-});
+// Route::get('/list', function () {
+//     return view('listfilm');
+// });
+
+Route::get('/list', 'ListController@home');
