@@ -1,11 +1,13 @@
-@extends('template/main')
+@extends('template/guest')
 
 @section('title', 'About | Pemesanan Bioskop')
 
-@section('container')
-    
-    <div class="container">
-      <h1>About us</h1>
-      <h3>This is us</h3>
-    </div>
+@section('bodysec')
+<br><br><br>
+<section class="features-area section_gap">
+  <div class="container text-center">
+      <h1>About us yo</h1>
+  </div>
+</section>
+<!-- end features Area -->
 @endsection
