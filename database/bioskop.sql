@@ -82,7 +82,7 @@ create table TIKET
    KODE_TIKET           varchar(20) not null  comment '',
    ID_KURSI             varchar(10) not null  comment '',
    HARGA                decimal(10) not null  comment '',
-   "CHECK"              int not null  comment '',
+   `CHECK`              int not null  comment '',
    primary key (KODE_TIKET)
 );
 
