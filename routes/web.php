@@ -13,17 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('newindex');
-});
+// Route::get('/', function () {
+//     return view('newindex');
+// });
 
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/about', 'HomeController@about');
+Route::get('/login', 'HomeController@login');
 
 // Route::get('/list', function () {
 //     return view('listfilm');
