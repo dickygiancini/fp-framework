@@ -25,4 +25,5 @@ Route::get('/login', 'HomeController@login');
 //     return view('listfilm');
 // });
 
-Route::get('/list', 'ListController@index');
+Route::get('/list', 'ListController@index')->name('movies.index');
+Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
