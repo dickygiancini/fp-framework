@@ -27,7 +27,8 @@
                     <div class="prd-bottom">
                       {{-- <h6>Action</h6> --}}
                       @foreach ($listMovies['genre_ids'] as $genre)
-                          {{ $genres->get($genre) }}
+                          {{ $genres->get($genre) }}@if (!$loop->last),
+                          @endif
                       @endforeach
                     </div>
                 </div>
