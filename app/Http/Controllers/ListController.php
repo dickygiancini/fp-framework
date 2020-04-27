@@ -18,10 +18,20 @@ class ListController extends Controller
         ->get('https://api.themoviedb.org/3/movie/popular')
         ->json()['results'];
 
-        dump($popularMovies);
+        $genresMovies = Http::withToken(config('services.tmdb.token'))
+        ->get('https://api.themoviedb.org/3/genre/movie/list')
+        ->json()['genres'];
+
+        $genres = collect($genresMovies)->mapWithKeys(function ($genre){
+            return [$genre['id'] => $genre['name']];
+        });
+
+        // Butuh ini buat lihat REST APInya
+        // dump($popularMovies);
         
         return view('listfilm', [
             'popularMovies' => $popularMovies,
+            'genres' => $genres,
         ]);
     }
 

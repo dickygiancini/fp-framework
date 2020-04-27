@@ -12,15 +12,23 @@
         <!-- single product -->
         <div class="col-lg-3 col-md-6">
             <div class="single-product">
-                <img class="img-fluid" src="{{ url('/assets/images/poster/banner_1.jpg') }}" alt="">
+                <a href="#">
+                  <img class="img-fluid" src="{{ 'https://image.tmdb.org/t/p/w500/'.$listMovies['poster_path'] }}" alt="poster">
+                </a>
                 <div class="product-details">
+                  <a href="">
                     <h6>{{ $listMovies['title'] }}</h6>
+                  </a>
                     <div class="price">
-                      <h6>85% |</h6>
-                      <h6> Feb, 18 2017</h6>
+                      <i class="fas fa-star"></i>
+                      <h6>{{ $listMovies['vote_average'] * 10 }}% |</h6>
+                      <h6>{{ \Carbon\Carbon::parse($listMovies['release_date'])->format('M d, Y') }}</h6>
                     </div>
                     <div class="prd-bottom">
-                      <h6>Action</h6>
+                      {{-- <h6>Action</h6> --}}
+                      @foreach ($listMovies['genre_ids'] as $genre)
+                          {{ $genres->get($genre) }}
+                      @endforeach
                     </div>
                 </div>
             </div>

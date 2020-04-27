@@ -15,8 +15,10 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>@yield('title')</title>
-	<!--
+    <title>@yield('title')</title>
+    {{-- Font Awesome --}}
+    <script src="https://kit.fontawesome.com/4a262f6e85.js" crossorigin="anonymous"></script>
+    <!--
 		CSS
         ============================================= -->
         
@@ -49,6 +51,7 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/list') }}">List</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Login</a></li>
                     </ul>
