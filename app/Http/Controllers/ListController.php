@@ -14,10 +14,14 @@ class ListController extends Controller
      */
     public function index()
     {
+        $nowPlayingMovies = Http::withToken(config('services.tmdb.token'))
+        ->get('https://api.themoviedb.org/3/movie/now_playing')
+        ->json()['results'];
+
         $popularMovies = Http::withToken(config('services.tmdb.token'))
         ->get('https://api.themoviedb.org/3/movie/popular')
         ->json()['results'];
-
+        
         $genresMovies = Http::withToken(config('services.tmdb.token'))
         ->get('https://api.themoviedb.org/3/genre/movie/list')
         ->json()['genres'];
@@ -27,9 +31,10 @@ class ListController extends Controller
         });
 
         // Butuh ini buat lihat REST APInya
-        // dump($popularMovies);
+        dump($nowPlayingMovies);
         
         return view('listfilm', [
+            'nowPlayingMovies' => $nowPlayingMovies,
             'popularMovies' => $popularMovies,
             'genres' => $genres,
         ]);
