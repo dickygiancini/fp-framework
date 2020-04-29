@@ -31,7 +31,7 @@ class ListController extends Controller
         });
 
         // Butuh ini buat lihat REST APInya
-        dump($nowPlayingMovies);
+        // dump($nowPlayingMovies);
         
         return view('listfilm', [
             'nowPlayingMovies' => $nowPlayingMovies,
