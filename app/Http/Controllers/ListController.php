@@ -69,7 +69,16 @@ class ListController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = Http::withToken(config('services.tmdb.token'))
+        ->get('https://api.themoviedb.org/3/movie/'.$id)
+        ->json();
+
+        // Detail Filmnya, doh ternyata gapake array results tinggal masukin param id
+        // dump($movie);
+
+        return view('show', [
+            'movie' => $movie,
+        ]);
     }
 
     /**
