@@ -38,3 +38,4 @@ Route::get('logout', 'AuthController@logout')->middleware('auth')->name('logout'
 
 Route::get('/list', 'ListController@index')->name('movies.index');
 Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
+Route::get('/homeadm', 'HomeController@homeadm');
