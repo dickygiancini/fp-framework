@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LoginAdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,20 @@ Route::get('/home', function() {
     return view('home');
 })->middleware('auth')->name('home');
 Route::get('logout', 'AuthController@logout')->middleware('auth')->name('logout');
+
+Route::get('/homeadmin', function() {
+    return view('homeadmin');
+});
+
+// Route::get('/loginadmin', function() {
+//     return view('loginadmin');
+// });
+
+Route::get('/loginadmin', 'LoginAdminController@getLoginAdmin')->name('loginadmin');
+Route::post('/loginadmin', 'LoginAdminController@postLoginAdmin' );
+Route::get('/logoutadmin', 'LoginAdminController@LogoutAdmin' );
+
+
 
 // Route::get('/list', function () {
 //     return view('listfilm');
