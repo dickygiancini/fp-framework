@@ -22,5 +22,10 @@ class HomeController extends Controller
     {
         return view('register');
     }
+    public function homeadm()
+    {
+        return view('homeadm');
+    }
 
 }
+
