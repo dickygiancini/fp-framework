@@ -39,7 +39,7 @@ class LoginAdminController extends Controller
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
             // if successful, then redirect to their intended location
             return redirect()
-            ->intended('/homeadmin')
+            ->intended('/homeadm')
             ->with('status','You are Logged in as Admin!');
         
         }else {
