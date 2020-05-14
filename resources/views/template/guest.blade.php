@@ -84,8 +84,9 @@
                 <div class="single-footer-widget">
                     <h6 class="text-center">About Us</h6>
                     <p class="text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-                        magna aliqua.
+                    Jadwalnonton memudahkan kamu mencari jadwal film dan harga tiket di seluruh Indonesia meliputi XXI, CGV, Cinemaxx, New Star Cineplex (NSC), Platinum Cineplex, FLIX Cinema dan lainnya.
+Jadwal terupdate setiap hari dan kamu juga bisa mencari bioskop terdekat dari tempat kamu berada.
+Jadwalnonton.com tidak berafiliasi dengan group bioskop manapun
                     </p>
                 </div>
             </div>
