@@ -14,7 +14,7 @@
                         <div class="col-xl-8">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="box-title">Pemesanan </h4>
+                                    <h4 class="box-title">Jadwal Tayang</h4>
                                 </div>
                                 <div class="card-body--">
                                     <div class="table-stats order-table ov-h">
@@ -24,7 +24,7 @@
                                                     <th class="serial">#</th>
                                                     <th class="avatar">Avatar</th>
                                                     <th>ID</th>
-                                                    <th>Nama</th>
+                                                    <th>Nama Film</th>
                                                     <th>Jenis Film</th>
                                                     <th>Qty</th>
                                                     <th>Status</th>

@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Admin</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -73,7 +73,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                        <a href="/homeadm"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title"></li><!-- /.menu-title -->
                     
@@ -87,7 +87,7 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Jadwal Tayang</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Jadwal Tayang</a></li>
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="/jadwaltayang">Jadwal Tayang</a></li>
                             <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Flot Chart</a></li>
                             <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Peity Chart</a></li>
                         </ul>
@@ -108,25 +108,18 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="admin/images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="admin/images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href=""><img src="admin/images/logo.png" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href=""><img src="admin/images/logo2.png" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
             <div class="top-right">
                 <div class="header-menu">
                     <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="user-avatar rounded-circle" src="admin/images/admin.jpg" alt="User Avatar">
                         </a>
-
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>My Profile</a>
-
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
-
-                            <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
-
                             <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
@@ -135,136 +128,9 @@
             </div>
         </header>
         <!-- /#header -->
-        <!-- Content -->
-        <div class="content">
-            <!-- Animated -->
-            <div class="animated fadeIn">
-              
-                <div class="clearfix"></div>
-                <!-- Orders -->
-                <div class="orders">
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="box-title">Pemesanan </h4>
-                                </div>
-                                <div class="card-body--">
-                                    <div class="table-stats order-table ov-h">
-                                        <table class="table ">
-                                            <thead>
-                                                <tr>
-                                                    <th class="serial">#</th>
-                                                    <th class="avatar">Avatar</th>
-                                                    <th>ID</th>
-                                                    <th>Nama</th>
-                                                    <th>Jenis Film</th>
-                                                    <th>Qty</th>
-                                                    <th>Status</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="serial">1.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/1.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5469 </td>
-                                                    <td>  <span class="name">Louis Stanley</span> </td>
-                                                    <td> <span class="product">Bintang Disurga</span> </td>
-                                                    <td><span class="count">2</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="serial">2.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/2.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5468 </td>
-                                                    <td>  <span class="name">Gregory Dixon</span> </td>
-                                                    <td> <span class="product">Menembus Langit</span> </td>
-                                                    <td><span class="count">2</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="serial">3.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/3.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5467 </td>
-                                                    <td>  <span class="name">Catherine Dixon</span> </td>
-                                                    <td> <span class="product">Bukan Empat Mata</span> </td>
-                                                    <td><span class="count">3</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="serial">4.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/4.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5466 </td>
-                                                    <td>  <span class="name">Mary Silva</span> </td>
-                                                    <td> <span class="product">Magic Mouse</span> </td>
-                                                    <td><span class="count">2</span></td>
-                                                    <td>
-                                                        <span class="badge badge-pending">Pending</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class=" pb-0">
-                                                    <td class="serial">5.</td>
-                                                    <td class="avatar pb-0">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/6.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5465 </td>
-                                                    <td>  <span class="name">Johnny Stephens</span> </td>
-                                                    <td> <span class="product">Burn the stage movie</span> </td>
-                                                    <td><span class="count">5</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- /.table-stats -->
-                                </div>
-                            </div> <!-- /.card -->
-                        </div>  <!-- /.col-lg-8 -->
 
-                        <div class="col-xl-4">
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-12">
-                                    <div class="card br-0">
-                                        <div class="card-body">
-                                            <div class="chart-container ov-h">
-                                                <div id="flotPie1" class="float-chart"></div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.card -->
-                                </div>                                
-                            </div>
-                        </div> <!-- /.col-md-4 -->
-                    </div>
-                </div>
-                <!-- /.orders -->
-               
-        <!-- /.content -->
-        <div class="clearfix"></div>
+        @yield('bodysec')
+
         <!-- Footer -->
         <footer class="site-footer">
             <div class="footer-inner bg-white">
