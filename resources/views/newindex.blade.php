@@ -14,8 +14,7 @@
                         <div class="col-lg-5 col-md-6">
                             <div class="banner-content">
                                 <h1>Deadpool 2</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                <p>Wade Wilson berusaha melindungi seorang mutan misterius bernama Russell yang diincar oleh Cable. Cable sendiri merupakan mutan yang datang dari masa depan. Untuk melindungi Russell, Wade lalu membentuk sebuah tim bernama X-Force yang beranggotakan Deadpool sendiri, Domino, Negasonic Teenage Warhead, Colossus, dan Bedlam.</p>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -29,8 +28,7 @@
                         <div class="col-lg-5">
                             <div class="banner-content">
                                 <h1>Deadpool 2</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                                <p>Wade Wilson berusaha melindungi seorang mutan misterius bernama Russell yang diincar oleh Cable. Cable sendiri merupakan mutan yang datang dari masa depan. Untuk melindungi Russell, Wade lalu membentuk sebuah tim bernama X-Force yang beranggotakan Deadpool sendiri, Domino, Negasonic Teenage Warhead, Colossus, dan Bedlam.</p>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -56,8 +54,8 @@
                     <div class="f-icon">
                         <img src="{{ url('/assets/img/features/f-icon1.png') }}" alt="">
                     </div>
-                    <h6>Free Delivery</h6>
-                    <p>Free Shipping on all order</p>
+                    <h6>Free</h6>
+                    <p>Tidak dipungut biaya tambahan</p>
                 </div>
             </div>
             <!-- single features -->
@@ -67,7 +65,7 @@
                         <img src="{{ url('/assets/img/features/f-icon2.png') }}" alt="">
                     </div>
                     <h6>Return Policy</h6>
-                    <p>Free Shipping on all order</p>
+                    <p>Full refund apabila terjadi kesalahan</p>
                 </div>
             </div>
             <!-- single features -->
@@ -77,7 +75,7 @@
                         <img src="{{ url('/assets/img/features/f-icon3.png') }}" alt="">
                     </div>
                     <h6>24/7 Support</h6>
-                    <p>Free Shipping on all order</p>
+                    <p>Konfirmasi apapun dalam 24/7</p>
                 </div>
             </div>
             <!-- single features -->
@@ -87,7 +85,7 @@
                         <img src="{{ url('/assets/img/features/f-icon4.png') }}" alt="">
                     </div>
                     <h6>Secure Payment</h6>
-                    <p>Free Shipping on all order</p>
+                    <p>Pembayaran aman</p>
                 </div>
             </div>
         </div>
@@ -103,10 +101,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <div class="section-title">
-                        <h1>Latest Products</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore
-                            magna aliqua.</p>
+                        <h1>Film Telah Tayang</h1>
+                        <p>Film yang telah menjadi primadona aplikasi kami</p>
                     </div>
                 </div>
             </div>
@@ -116,11 +112,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/banner_1.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>Avengers</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -149,11 +144,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_2.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>avengers infinity war</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -182,11 +176,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_3.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>kimi no nawa</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
                                 <a href="" class="social-info">
@@ -214,11 +207,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_4.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>mib international</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -247,11 +239,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_5.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>fate series</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -280,11 +271,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_6.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>alita battle angel</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -313,11 +303,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_7.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>jumanji</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -346,11 +335,10 @@
                     <div class="single-product">
                         <img class="img-fluid" src="{{ url('/assets/images/poster/poster_8.jpg') }}" alt="">
                         <div class="product-details">
-                            <h6>addidas New Hammer sole
-                                for Sports person</h6>
+                            <h6>kishuku gakkou no juliet</h6>
                             <div class="price">
-                                <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6>Expired</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -400,7 +388,7 @@
                                 for Sports person</h6>
                             <div class="price">
                                 <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 
@@ -433,7 +421,7 @@
                                 for Sports person</h6>
                             <div class="price">
                                 <h6>$150.00</h6>
-                                <h6 class="l-through">$210.00</h6>
+                                <h6 class="l-through">Rp. 50.000</h6>
                             </div>
                             <div class="prd-bottom">
 

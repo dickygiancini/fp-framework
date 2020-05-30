@@ -9,11 +9,11 @@
     <div class="container">
         <div class="row s_product_inner">
             <div class="col-lg-6">
-                <div class="s_Product_carousel">
-                    <div class="single-prd-item">
-                        <img class="img-fluid" src="{{ 'https://image.tmdb.org/t/p/w500/'.$movie['poster_path'] }}" alt="poster">
+                <br><br>
+                    <div class="single-prd-item text-center">
+                        <img class="img-fluid" src="{{ 'https://image.tmdb.org/t/p/w300/'.$movie['poster_path'] }}" alt="poster">
                     </div>
-                </div>
+                <br><br>
             </div>
             <div class="col-lg-5 offset-lg-1">
                 <div class="s_product_text">
