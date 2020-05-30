@@ -72,8 +72,8 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                    <li class="">
+                        <a href="#"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
                     </li>
                     <li class="menu-title"></li><!-- /.menu-title -->
                     
@@ -92,7 +92,7 @@
                             <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Peity Chart</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children dropdown">
+                    <li class="active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Data User</a>
                     </li>
 
@@ -150,98 +150,37 @@
                         <div class="col-xl-8">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="box-title">Pemesanan </h4>
+                                    <h4 class="box-title">Data User</h4>
                                 </div>
                                 <div class="card-body--">
                                     <div class="table-stats order-table ov-h">
                                         <table class="table ">
                                             <thead>
                                                 <tr>
-                                                    <th class="serial">#</th>
-                                                    <th class="avatar">Avatar</th>
-                                                    <th>ID</th>
+                                                    <th>No</th>
                                                     <th>Nama</th>
-                                                    <th>Jenis Film</th>
-                                                    <th>Qty</th>
-                                                    <th>Status</th>
+                                                    <th>Email</th>
+                                                    <th>Password</th>
+                                                    <th>Opsi</th>
                                                 </tr>
                                             </thead>
+                                            @php
+                                                $no = 1;
+                                            @endphp
                                             <tbody>
+                                                @foreach ($users as $user)
                                                 <tr>
-                                                    <td class="serial">1.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/1.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5469 </td>
-                                                    <td>  <span class="name">Louis Stanley</span> </td>
-                                                    <td> <span class="product">Bintang Disurga</span> </td>
-                                                    <td><span class="count">2</span></td>
+                                                    <td>{{ $no++ }}</td>
+                                                    <td>{{ $user->name }}</td>
+                                                    <td>{{ $user->email }}</td>
+                                                    <td>{{ $user->password }}</td>
                                                     <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="/adminuser/edit{{ $user->id }}">Edit</button>
+                                                        <a class="badge badge-complete" href="/adminuser/edit{{ $user->id }}">Edit</a>
+                                                        <a class="badge badge-pending" href="#">Hapus</a>
+                                                    </td>                                                    
                                                 </tr>
-                                                <tr>
-                                                    <td class="serial">2.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/2.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5468 </td>
-                                                    <td>  <span class="name">Gregory Dixon</span> </td>
-                                                    <td> <span class="product">Menembus Langit</span> </td>
-                                                    <td><span class="count">2</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="serial">3.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/3.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5467 </td>
-                                                    <td>  <span class="name">Catherine Dixon</span> </td>
-                                                    <td> <span class="product">Bukan Empat Mata</span> </td>
-                                                    <td><span class="count">3</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="serial">4.</td>
-                                                    <td class="avatar">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/4.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5466 </td>
-                                                    <td>  <span class="name">Mary Silva</span> </td>
-                                                    <td> <span class="product">Magic Mouse</span> </td>
-                                                    <td><span class="count">2</span></td>
-                                                    <td>
-                                                        <span class="badge badge-pending">Pending</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class=" pb-0">
-                                                    <td class="serial">5.</td>
-                                                    <td class="avatar pb-0">
-                                                        <div class="round-img">
-                                                            <a href="#"><img class="rounded-circle" src="admin/images/avatar/6.jpg" alt=""></a>
-                                                        </div>
-                                                    </td>
-                                                    <td> #5465 </td>
-                                                    <td>  <span class="name">Johnny Stephens</span> </td>
-                                                    <td> <span class="product">Burn the stage movie</span> </td>
-                                                    <td><span class="count">5</span></td>
-                                                    <td>
-                                                        <span class="badge badge-complete">Complete</span>
-                                                    </td>
-                                                </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div> <!-- /.table-stats -->
@@ -284,6 +223,39 @@
         <!-- /.site-footer -->
     </div>
     <!-- /#right-panel -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Edit Data</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            @foreach ($users as $user)
+            <form action = "/adminuser/update" method="post">
+            {{ csrf_field() }}
+
+            <div class="modal-body"> 
+                <input type="hidden" name="id" value="{{ $user->id }}">
+                Nama <input type="text" required="required" name="name" value="{{ $user->name}}"> <br />                                  
+                Email <input type="email" required="required" name="email" value="{{ $user->email}}"> <br />                                   
+                Password <input type="text" required="required" name="password" value="{{ $user->password}}"><br />                                      
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+
+        </form>
+        @endforeach
+
+        </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>

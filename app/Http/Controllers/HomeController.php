@@ -26,6 +26,18 @@ class HomeController extends Controller
     {
         return view('homeadm');
     }
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+    public function pesan()
+    {
+        return view('pesan');
+    }
+    public function userprofile()
+    {
+        return view('userprofile');
+    }
 
 }
 

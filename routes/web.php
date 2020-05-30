@@ -59,3 +59,13 @@ Route::get('/test', function(){
     Artisan::call('migrate');
     Artisan::call('db:seed');
 });
+
+Route::get('/dashboard', 'HomeController@dashboard');
+Route::get('/pesan', 'HomeController@pesan');
+Route::get('/userprofile', 'HomeController@userprofile');
+
+//admin
+Route::get('/adminuser', 'AdminController@adminuser');
+Route::get('/adminuser/edit{id}', 'AdminController@edituser');
+Route::post('/adminuser/update', 'AdminController@updateuser');
+Route::get('/adminfilm', 'AdminController@adminfilm');
