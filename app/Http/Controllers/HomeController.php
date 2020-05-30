@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+USE Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,10 @@ class HomeController extends Controller
     }
     public function homeadm()
     {
-        return view('homeadm');
+        $jadwalltayang = DB::table('jadwal')->get();
+     
+
+        return view('homeadm',['homeadm' => $jadwalltayang]);
     }
     
 

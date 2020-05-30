@@ -54,7 +54,7 @@ Route::get('/logoutadmin', 'LoginAdminController@LogoutAdmin' );
 Route::get('/list', 'ListController@index')->name('movies.index');
 Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
 Route::get('/homeadm', 'HomeController@homeadm');
-Route::get('/jadwaltayang', 'AdminController@jadwaltayang');
+Route::get('/jadwaltayang', 'AdminController@index');
 
 Route::get('/test', function(){
     Artisan::call('migrate');

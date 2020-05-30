@@ -2,6 +2,9 @@
 
 @section('bodysec')
 
+
+
+
  <!-- Content -->
  <div class="content">
             <!-- Animated -->
