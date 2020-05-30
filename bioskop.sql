@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 11:23 AM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Waktu pembuatan: 31 Bulan Mei 2020 pada 00.11
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admins`
+-- Struktur dari tabel `admins`
 --
 
 CREATE TABLE `admins` (
@@ -39,7 +39,7 @@ CREATE TABLE `admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `admins`
+-- Dumping data untuk tabel `admins`
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `admins` (`id`, `name`, `email`, `password`, `remember_token`, `crea
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -63,7 +63,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `film`
+-- Struktur dari tabel `film`
 --
 
 CREATE TABLE `film` (
@@ -74,19 +74,29 @@ CREATE TABLE `film` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jadwal`
+-- Struktur dari tabel `jadwal`
 --
 
 CREATE TABLE `jadwal` (
-  `ID_JADWAL` varchar(20) NOT NULL,
+  `ID_JADWAL` int(20) NOT NULL,
   `TANGGAL` date NOT NULL,
-  `JAMTAYANG` time NOT NULL
+  `JAMTAYANG` time NOT NULL,
+  `NAMAFILM` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jadwal`
+--
+
+INSERT INTO `jadwal` (`ID_JADWAL`, `TANGGAL`, `JAMTAYANG`, `NAMAFILM`) VALUES
+(1, '2020-05-01', '15:15:00', 'Laskar Pelangi'),
+(2, '2020-05-05', '13:00:00', 'AADC'),
+(3, '2020-05-01', '15:15:00', 'AADC 2');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kursi`
+-- Struktur dari tabel `kursi`
 --
 
 CREATE TABLE `kursi` (
@@ -98,7 +108,7 @@ CREATE TABLE `kursi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -108,7 +118,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -120,7 +130,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `studio`
+-- Struktur dari tabel `studio`
 --
 
 CREATE TABLE `studio` (
@@ -132,7 +142,7 @@ CREATE TABLE `studio` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tiket`
+-- Struktur dari tabel `tiket`
 --
 
 CREATE TABLE `tiket` (
@@ -145,7 +155,7 @@ CREATE TABLE `tiket` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -164,7 +174,7 @@ CREATE TABLE `transaksi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -179,7 +189,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -195,59 +205,59 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 --
 
 --
--- Indexes for table `admins`
+-- Indeks untuk tabel `admins`
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `admins_email_unique` (`email`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `film`
+-- Indeks untuk tabel `film`
 --
 ALTER TABLE `film`
   ADD PRIMARY KEY (`KODE_FILM`);
 
 --
--- Indexes for table `jadwal`
+-- Indeks untuk tabel `jadwal`
 --
 ALTER TABLE `jadwal`
   ADD PRIMARY KEY (`ID_JADWAL`);
 
 --
--- Indexes for table `kursi`
+-- Indeks untuk tabel `kursi`
 --
 ALTER TABLE `kursi`
   ADD PRIMARY KEY (`ID_KURSI`),
   ADD KEY `FK_KURSI_RELATIONS_STUDIO` (`KODE_STUDIO`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `studio`
+-- Indeks untuk tabel `studio`
 --
 ALTER TABLE `studio`
   ADD PRIMARY KEY (`KODE_STUDIO`),
   ADD KEY `FK_STUDIO_RELATIONS_FILM` (`KODE_FILM`);
 
 --
--- Indexes for table `tiket`
+-- Indeks untuk tabel `tiket`
 --
 ALTER TABLE `tiket`
   ADD PRIMARY KEY (`KODE_TIKET`),
   ADD KEY `FK_TIKET_RELATIONS_KURSI` (`ID_KURSI`);
 
 --
--- Indexes for table `transaksi`
+-- Indeks untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`ID_TRANSAKSI`),
@@ -258,63 +268,67 @@ ALTER TABLE `transaksi`
   ADD KEY `FK_TRANSAKS_RELATIONS_FILM` (`KODE_FILM`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admins`
+-- AUTO_INCREMENT untuk tabel `admins`
 --
 ALTER TABLE `admins`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `jadwal`
+--
+ALTER TABLE `jadwal`
+  MODIFY `ID_JADWAL` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `kursi`
+-- Ketidakleluasaan untuk tabel `kursi`
 --
 ALTER TABLE `kursi`
   ADD CONSTRAINT `FK_KURSI_RELATIONS_STUDIO` FOREIGN KEY (`KODE_STUDIO`) REFERENCES `studio` (`KODE_STUDIO`);
 
 --
--- Constraints for table `studio`
+-- Ketidakleluasaan untuk tabel `studio`
 --
 ALTER TABLE `studio`
   ADD CONSTRAINT `FK_STUDIO_RELATIONS_FILM` FOREIGN KEY (`KODE_FILM`) REFERENCES `film` (`KODE_FILM`);
 
 --
--- Constraints for table `tiket`
+-- Ketidakleluasaan untuk tabel `tiket`
 --
 ALTER TABLE `tiket`
   ADD CONSTRAINT `FK_TIKET_RELATIONS_KURSI` FOREIGN KEY (`ID_KURSI`) REFERENCES `kursi` (`ID_KURSI`);
-
-
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
