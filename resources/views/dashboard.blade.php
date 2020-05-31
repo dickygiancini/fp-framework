@@ -98,6 +98,9 @@
                 </div>
             </nav>
             <!-- End Navbar -->
+
+            <h1>selamat datang</h1> 
+            
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -123,7 +126,8 @@
             </footer>
         </div>
     </div>
-    <!--   -->
+    
+    
     <!-- <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
         <a href="#" data-toggle="dropdown">
@@ -200,8 +204,7 @@
             </li>
         </ul>
     </div>
-</div>
- -->
+</div> 
 </body>
 <!--   Core JS Files   -->
 <script src="{{ url('/assets/js/core/jquery.3.2.1.min.js') }}" type="text/javascript"></script>

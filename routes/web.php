@@ -69,3 +69,4 @@ Route::get('/adminuser', 'AdminController@adminuser');
 Route::get('/adminuser/edit{id}', 'AdminController@edituser');
 Route::post('/adminuser/update', 'AdminController@updateuser');
 Route::get('/adminfilm', 'AdminController@adminfilm');
+Route::post('/adminfilm', 'AdminController@updatefilm');

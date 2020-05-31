@@ -147,43 +147,56 @@
                 <!-- Orders -->
                 <div class="orders">
                     <div class="row">
-                        <div class="col-xl-8">
+                        <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="box-title">Daftar Film</h4>
+                                    <h4 class="box-title mb-3">Daftar Film</h4>
+                                
+
+                                @foreach ($film as $data_film)
+                                
+
+                                    <form class="row" action="" method="post" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
+
+
+                                        <div class="card ml-5" style="width: 18rem;">
+                                            
+                                            <div class="card-body">
+
+                                                <img src="admin/images/admin.jpg" class="card-img-top mb-3" alt="...">
+                                                <div class="form-group">
+                                                    <input type="file" class="" name="poster" placeholder="Poster" required>
+                                                </div>
+
+                                                <h5 class="card-title mt-3">{{ $data_film->judul_film }}</h5>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="judul_film" placeholder="Judul Film" required>
+                                                </div>
+
+                                                <h5 class="card-text mt-3">{{ $data_film->overview }}</h5>
+                                                <div class="form-group mt-3">
+                                                    <input type="text" class="form-control" name="overview" placeholder="Overview" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button type="submit" value="submit" class="btn btn-primary">Save</button>
+                                                </div>
+
+                                            </div>
+                          
+
+                                        </div>
+
+
+                                    </form>
+
+                                    
+                                  @endforeach
                                 </div>
+
                                 <div class="card-body--">
-                                    <div class="table-stats order-table ov-h">
-                                        <table class="table ">
-                                            <thead>
-                                                <tr>
-                                                    <th>Judul Film</th>
-                                                    {{-- <th>Nama</th>
-                                                    <th>Email</th>
-                                                    <th>Password</th>
-                                                    <th>Opsi</th> --}}
-                                                </tr>
-                                            </thead>
-                                            @php
-                                                $no = 1;
-                                            @endphp
-                                            <tbody>
-                                                @foreach ($film as $data_film)
-                                                <tr>
-                                                    {{-- <td>{{ $no++ }}</td> --}}
-                                                    <td>{{ $data_film->judul_film }}</td>
-                                                    {{-- <td>{{ $user->email }}</td>
-                                                    <td>{{ $user->password }}</td> --}}
-                                                    <td>
-                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="#">Edit</button>
-                                                        <a class="badge badge-complete" href="#">Edit</a>
-                                                        <a class="badge badge-pending" href="#">Hapus</a>
-                                                    </td>                                                    
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- /.table-stats -->
+                                    
                                 </div>
                             </div> <!-- /.card -->
                         </div>  <!-- /.col-lg-8 -->
