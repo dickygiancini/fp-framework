@@ -105,4 +105,9 @@ class UserHomeController extends Controller
     {
         //
     }
+
+    public function pesan()
+    {
+        return view('pesan');
+    }
 }

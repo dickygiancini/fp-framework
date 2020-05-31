@@ -33,6 +33,7 @@ Route::post('/register', 'AuthController@postRegister')->middleware('guest');
 // })->middleware('auth')->name('home');
 
 Route::get('/home', 'UserHomeController@index')->middleware('auth')->name('home.index');
+Route::get('/pesan', 'UserHomeController@pesan');
 
 Route::get('logout', 'AuthController@logout')->middleware('auth')->name('logout');
 
