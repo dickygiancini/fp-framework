@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="admin/assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="admin/assets/css/style.css">
+    <link rel="stylesheet" href="{{ url('assets/admin/assets/css/cs-skin-elastic.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/assets/css/style.css')}}">
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
@@ -108,8 +108,8 @@
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href=""><img src="admin/images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href=""><img src="admin/images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href=""><img src="{{ url('assets/admin/images/logo.png')}}" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href=""><img src="{{ url('assets/admin/images/logo2.png')}}" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                 <div class="header-menu">
                     <div class="user-area dropdown float-right">
                         <a href="#"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="admin/images/admin.jpg" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="{{ url('assets/admin/images/admin.jpg')}}" alt="User Avatar">
                         </a>
                         <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
@@ -153,7 +153,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-    <script src="admin/assets/js/main.js"></script>
+    <script src="{{ url('assets/admin/assets/js/main.js')}}"></script>
 
     <!--  Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
@@ -167,11 +167,11 @@
     <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
-    <script src="admin/assets/js/init/weather-init.js"></script>
+    <script src="{{ url('assets/admin/assets/js/init/weather-init.js')}}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
-    <script src="admin/assets/js/init/fullcalendar-init.js"></script>
+    <script src="{{ url('assets/admin/assets/js/init/fullcalendar-init.js')}}"></script>
 
          
 </body>

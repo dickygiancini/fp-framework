@@ -29,7 +29,7 @@
                     </ul>
                     <p>{{ $movie['overview'] }}</p>
                     <div class="card_area d-flex align-items-center">
-                        <a class="primary-btn" href="#">PESAN TIKET</a>
+                        <a class="primary-btn" href="{{ url('/login') }}">PESAN TIKET</a>
                     </div>
                 </div>
             </div>
