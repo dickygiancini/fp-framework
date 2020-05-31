@@ -97,6 +97,7 @@
                     </div>
                 </div>
             </nav>
+
             <!-- End Navbar -->
             <div class="content">
                 <div class="container-fluid">
@@ -104,10 +105,29 @@
                         
                     </div>
                     <div class="row">
-
+                        <form>
+                            <div class="form-group">
+                                <label>Nama film</label>
+                                <input type="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Film">
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Tayang</label>
+                                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tanggal Film">
+                            </div>
+                            <div class="form-group">
+                                <label>Jam Tayang</label>
+                                <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jam Tayang">
+                            </div>
+                            <div class="form-group">
+                                <label>Jumlah Tiket</label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jumlah">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Pesan</button>
+                        </form>
                     </div>
                 </div>
             </div>
+            
             <footer class="footer">
                 <div class="container-fluid">
                     <nav>
@@ -123,6 +143,8 @@
             </footer>
         </div>
     </div>
+
+    
     <!--   -->
     <!-- <div class="fixed-plugin">
     <div class="dropdown show-dropdown">

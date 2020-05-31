@@ -60,6 +60,9 @@ Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
 Route::get('/homeadm', 'HomeController@homeadm');
 Route::get('/jadwaltayang', 'AdminController@index');
 
+
+Route::get('/pesan', 'UserHomeController@pesan');
+
 Route::get('/test', function(){
     Artisan::call('migrate');
     Artisan::call('db:seed');
