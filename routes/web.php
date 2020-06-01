@@ -59,9 +59,11 @@ Route::get('/list', 'ListController@index')->name('movies.index');
 Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
 Route::get('/homeadm', 'HomeController@homeadm');
 Route::get('/jadwaltayang', 'AdminController@index');
+Route::get('/tambahjadwal', 'AdminController@index');
 
 
 Route::get('/pesan', 'UserHomeController@pesan');
+Route::get('/kursi', 'UserHomeController@kursi');
 
 Route::get('/test', function(){
     Artisan::call('migrate');
