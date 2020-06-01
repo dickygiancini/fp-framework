@@ -164,9 +164,9 @@
                                             
                                             <div class="card-body">
 
-                                                <img src="admin/images/admin.jpg" class="card-img-top mb-3" alt="...">
+                                                <img src="{{ '/data_file/'.$data_film->poster }}" class="card-img-top mb-3" alt="...">
                                                 <div class="form-group">
-                                                    <input type="file" class="" name="poster" placeholder="Poster" required>
+                                                    <input type="file" class="" name="poster" required>
                                                 </div>
 
                                                 <h5 class="card-title mt-3">{{ $data_film->judul_film }}</h5>
@@ -176,7 +176,7 @@
 
                                                 <h5 class="card-text mt-3">{{ $data_film->overview }}</h5>
                                                 <div class="form-group mt-3">
-                                                    <input type="text" class="form-control" name="overview" placeholder="Overview" required>
+                                                    <input type="textarea" class="form-control" name="overview" placeholder="Overview" required>
                                                 </div>
 
                                                 <div class="form-group">
