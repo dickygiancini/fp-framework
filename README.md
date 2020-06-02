@@ -1,4 +1,4 @@
-Peoject ini dibuat dengan tujuan untuk memenuhi tugas mata kuliah Pemrogamman Framework B (Laravel)
+Project ini dibuat dengan tujuan untuk memenuhi tugas mata kuliah Pemrogamman Framework B (Laravel)
 Studi Kasus : Sistem Informasi Bioskop
 
 Anggota Kelompok :
