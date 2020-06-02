@@ -77,5 +77,6 @@ Route::get('/adminfilm/edit/{id}', 'AdminController@editfilm');
 Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
 Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
 Route::get('/pemesanan', 'AdminController@pemesanan');
+Route::get('/kursi', 'UserController@kursi');
 
 //user

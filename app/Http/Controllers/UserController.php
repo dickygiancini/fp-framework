@@ -14,4 +14,10 @@ class UserController extends Controller
         //mengirim data ke view adminuser.blade.php
         return view('home', ['film' => $film]);
     }
+
+    public function kursi()
+    {
+       
+        return view('kursi');
+    }
 }
