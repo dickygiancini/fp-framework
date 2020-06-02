@@ -18,6 +18,7 @@ class CreateFilmTable extends Migration
             $table->string('judul_film');
             $table->string('poster');
             $table->string('overview');
+            $table->time('jam');
             $table->timestamps();
         });
     }

@@ -9,5 +9,5 @@ class Film extends Model
 
     protected $table = "film";
  
-    protected $fillable = ['judul_film', 'poster', 'overview', ];
+    protected $fillable = ['judul_film', 'poster', 'overview', 'jam', ];
 }

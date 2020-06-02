@@ -175,9 +175,8 @@
                                                     <td>{{ $user->email }}</td>
                                                     <td>{{ $user->password }}</td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="/adminuser/edit{{ $user->id }}">Edit</button>
-                                                        <a class="badge badge-complete" href="/adminuser/edit{{ $user->id }}">Edit</a>
-                                                        <a class="badge badge-pending" href="#">Hapus</a>
+                                                        <a class="badge badge-complete" href="/adminuser/edit/{{ $user->id }}">Edit</a>
+                                                        <a class="badge badge-pending" href="/adminuser/hapus/{{ $user->id }}">Hapus</a>
                                                     </td>                                                    
                                                 </tr>
                                                 @endforeach
@@ -188,19 +187,7 @@
                             </div> <!-- /.card -->
                         </div>  <!-- /.col-lg-8 -->
 
-                        <div class="col-xl-4">
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-12">
-                                    <div class="card br-0">
-                                        <div class="card-body">
-                                            <div class="chart-container ov-h">
-                                                <div id="flotPie1" class="float-chart"></div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.card -->
-                                </div>                                
-                            </div>
-                        </div> <!-- /.col-md-4 -->
+                       
                     </div>
                 </div>
                 <!-- /.orders -->
@@ -223,39 +210,6 @@
         <!-- /.site-footer -->
     </div>
     <!-- /#right-panel -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Edit Data</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            @foreach ($users as $user)
-            <form action = "/adminuser/update" method="post">
-            {{ csrf_field() }}
-
-            <div class="modal-body"> 
-                <input type="hidden" name="id" value="{{ $user->id }}">
-                Nama <input type="text" required="required" name="name" value="{{ $user->name}}"> <br />                                  
-                Email <input type="email" required="required" name="email" value="{{ $user->email}}"> <br />                                   
-                Password <input type="text" required="required" name="password" value="{{ $user->password}}"><br />                                      
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-
-        </form>
-        @endforeach
-
-        </div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>

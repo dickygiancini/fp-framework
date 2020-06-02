@@ -28,9 +28,10 @@ Route::get('/login', 'AuthController@getLogin')->name('login')->middleware('gues
 Route::post('/login', 'AuthController@postLogin')->middleware('guest');
 Route::get('/register', 'AuthController@getRegister')->name('register')->middleware('guest');
 Route::post('/register', 'AuthController@postRegister')->middleware('guest');
-Route::get('/home', function() {
-    return view('home');
-})->middleware('auth')->name('home');
+Route::get('/home', 'UserController@userfilm')->middleware('auth')->name('home');
+// Route::get('/home', function() {
+//     return view('home');
+// })->middleware('auth')->name('home');
 Route::get('logout', 'AuthController@logout')->middleware('auth')->name('logout');
 
 Route::get('/homeadmin', function() {
@@ -66,7 +67,14 @@ Route::get('/userprofile', 'HomeController@userprofile');
 
 //admin
 Route::get('/adminuser', 'AdminController@adminuser');
-Route::get('/adminuser/edit{id}', 'AdminController@edituser');
+Route::get('/adminuser/edit/{id}', 'AdminController@edituser');
 Route::post('/adminuser/update', 'AdminController@updateuser');
+Route::get('/adminuser/hapus/{id}', 'AdminController@hapususer');
+
 Route::get('/adminfilm', 'AdminController@adminfilm');
-Route::post('/adminfilm', 'AdminController@updatefilm');
+Route::post('/adminfilm', 'AdminController@tambahfilm');
+Route::get('/adminfilm/edit/{id}', 'AdminController@editfilm');
+Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
+Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
+
+//user

@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Daftar Film</title>
+    <title>Dashboard Admin</title>
     <meta name="description" content="Dashboard Admin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -85,14 +85,14 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Daftar Film</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>Jadwal Tayang</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="active menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Daftar Film</a></li>
-                            <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Kursi</a></li>
-                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Studio</a></li>
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Jadwal Tayang</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Flot Chart</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Peity Chart</a></li>
                         </ul>
                     </li>
-                    <li class="">
+                    <li class="active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Data User</a>
                     </li>
 
@@ -147,125 +147,38 @@
                 <!-- Orders -->
                 <div class="orders">
                     <div class="row">
-                        <div class="col-xl-6">
+                        <div class="col-xl-8">
                             <div class="card">
-                                <div class="card-body">
-                                    <h3 class="box-title mb-3">Data Film</h3>
                                 
-
-                                @foreach ($film as $data_film)
-                                    
-
-                                        <div class="card ml-5" style="width: 18rem;">
-                                            
-                                            <div class="card-body">
-                                                <img src="{{ url('data_file/'.$data_film->poster) }}"  class="card-img-top mb-3" alt="...">
-                                               
-                                                <table class="table">
-                                                    
-                                                    <tbody>
-                                                      <tr>
-                                                        <th><h5 class="card-title mt-3">Judul Film</h5></th>
-                                                        <td><h5 class="card-title mt-3">{{ $data_film->judul_film }}</h5></td>
-                                                      </tr>
-                                                      <tr>
-                                                        <th><h5 class="card-title mt-3">Overview</h5></th>
-                                                        <td><h5 class="card-text mt-3 mb-3">{{ $data_film->overview }}</h5></td>
-                                                      </tr>
-                                                      <tr>
-                                                        <th><h5 class="card-title mt-3">Jam Mulai</h5></th>
-                                                        <td><h5 class="card-text mt-3 mb-3">{{ $data_film->jam }}</h5></td>
-                                                      </tr>
-                                                      <tr>
-                                                        <th colspan="2">
-                                                            <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Edit</a>
-                                                            <a class="btn btn-danger" href="/adminfilm/hapus/{{ $data_film->id }}">Hapus</a>
-                                                        </td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-
-                                                  
-                                                {{-- <h5 class="card-title mt-3">Judul Film</h5>
-                                                <h5 class="card-title mt-3">{{ $data_film->judul_film }}</h5>
-                                                
-                                                <h5 class="card-title mt-3">Overview</h5>
-                                                <h5 class="card-text mt-3 mb-3">{{ $data_film->overview }}</h5>
-
-                                                <h5 class="card-title mt-3">Jam Mulai</h5>
-                                                <h5 class="card-text mt-3 mb-3">{{ $data_film->jam }}</h5>
-                                                
-                                                <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Edit</a>
-                                                <a class="btn btn-danger" href="/adminfilm/hapus/{{ $data_film->id }}">Hapus</a> --}}
-                                            
-
-                                            </div>
-                                        </div>
-                                    
-                                  @endforeach
-                                  
-                                </div>
-
                                 <div class="card-body--">
-                                    
+
+                                    @foreach ($users as $user)
+                                    <form action = "/adminuser/update" method="post">
+                                    {{ csrf_field() }}
+
+                                    <div class="card-body">
+                                        <h4 class="box-title">Data User {{ $user->name}} </h4>
+                                    </div>
+                        
+                                    <div class="modal-body"> 
+                                        <input type="hidden" name="id" value="{{ $user->id }}">
+                                        Nama <input type="text" required="required" name="name" value="{{ $user->name}}"> <br />                                  
+                                        Email <input type="email" required="required" name="email" value="{{ $user->email}}"> <br />                                   
+                                        Password <input type="text" required="required" name="password" value="{{ $user->password}}"><br />                                      
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a class="btn btn-secondary" href="/adminuser">Kembali</a>
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                        
+                                </form>
+                                @endforeach
+
                                 </div>
                             </div> <!-- /.card -->
                         </div>  <!-- /.col-lg-8 -->
 
-                        <div class="col-xl-4">
-                            <div class="row">
-                                <div class="col-lg-6 col-xl-12">
-                                    <div class="card br-0">
-                                        <div class="card-body">
-
-                                            <h3 class="box-title mb-3">Tambah Data Film</h3>
-
-                                            <div class="chart-container ov-h">
-                                           
-                                                
-                                                    <form class="row" action="" method="post" enctype="multipart/form-data">
-                                                        {{ csrf_field() }}
-                
-                                                        <div class="card ml-5" style="width: 18rem;">
-                                                            
-                                                            <div class="card-body">
-                                                                <h5 class="card-title mt-3">Poster Film</h5>
-                                                                <img src="{{ url('data_file/'.$data_film->poster) }}" class="card-img-top mb-3" alt="...">
-                                                                
-                                                                <div class="form-group">
-                                                                    <input type="file" class="" name="poster" required>
-                                                                </div>
-                
-                                                                <h5 class="card-title mt-3">Judul Film</h5>
-                                                                <div class="form-group">
-                                                                    <input type="text" class="form-control" name="judul_film" placeholder="Judul Film" required>
-                                                                </div>
-                
-                                                                <h5 class="card-text mt-3">Overview</h5>
-                                                                <div class="form-group mt-3">
-                                                                    <input type="textarea" class="form-control" name="overview" placeholder="Overview" required>
-                                                                </div>
-
-                                                                <h5 class="card-text mt-3">Jam</h5>
-                                                                <div class="form-group mt-3">
-                                                                    <input type="time" class="form-control" name="jam" placeholder="Jam" id="myTime" required>
-                                                                </div>
-                
-                                                                <div class="form-group">
-                                                                    <button type="submit" value="submit" class="btn btn-success">Tambah</button>
-                                                                </div>
-                
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                  
-
-                                            </div>
-                                        </div>
-                                    </div><!-- /.card -->
-                                </div>                                
-                            </div>
-                        </div> <!-- /.col-md-4 -->
+                        
                     </div>
                 </div>
                 <!-- /.orders -->
@@ -289,16 +202,12 @@
     </div>
     <!-- /#right-panel -->
 
-    
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="admin/assets/js/main.js"></script>
-
-    
 
     <!--  Chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
@@ -321,3 +230,13 @@
          
 </body>
 </html>
+
+
+
+
+
+
+                                    
+                                    
+                                
+                               
