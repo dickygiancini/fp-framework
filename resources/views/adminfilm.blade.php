@@ -230,8 +230,7 @@
                                                             
                                                             <div class="card-body">
                                                                 <h5 class="card-title mt-3">Poster Film</h5>
-                                                                <img src="{{ url('data_file/'.$data_film->poster) }}" class="card-img-top mb-3" alt="...">
-                                                                
+                                                                                                                                
                                                                 <div class="form-group">
                                                                     <input type="file" class="" name="poster" required>
                                                                 </div>
