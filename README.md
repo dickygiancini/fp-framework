@@ -1,4 +1,4 @@
-Dibuat dengan tujuan untuk memenuhi tugas mata kuliah Pemrogamman Framework B (Laravel)
+Peoject ini dibuat dengan tujuan untuk memenuhi tugas mata kuliah Pemrogamman Framework B (Laravel)
 Studi Kasus : Sistem Informasi Bioskop
 
 Anggota Kelompok :
@@ -17,3 +17,5 @@ jalankan url (/login) dengan ketentuan setelah melakukan login dan telah memilik
 
 Jika menjadi admin :
 jalankan url (/loginadmin) dengan email:admin@admin.com password:12345
+
+Thanks to https://stackoverflow.com/
