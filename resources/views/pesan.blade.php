@@ -43,13 +43,13 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="#" class="simple-text">
+                    <a href="{{ url('/home') }}" class="simple-text">
                         Dashboard Bioskop
                     </a>
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ url('/home') }}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Dashboard</p>
                         </a>

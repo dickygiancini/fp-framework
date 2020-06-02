@@ -43,19 +43,19 @@
      -->
              <div class="sidebar-wrapper">
                  <div class="logo">
-                     <a href="#" class="simple-text">
+                     <a href="{{ url('/home') }}" class="simple-text">
                          Selamat Datang
                      </a>
                  </div>
                  <ul class="nav">
                      <li class="nav-item active">
-                         <a class="nav-link" href="#">
+                         <a class="nav-link" href="{{ url('/home') }}">
                              <i class="nc-icon nc-chart-pie-35"></i>
                              <p>Home</p>
                          </a>
                      </li>
                      <li>
-                         <a class="nav-link" href="#">
+                         <a class="nav-link" href="{{ url('/pesan') }}">
                              <i class="nc-icon nc-chart-pie-35"></i>
                              <p>Pesan</p>
                          </a>
@@ -73,7 +73,7 @@
              <!-- Navbar -->
              <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                  <div class="container-fluid">
-                     <a class="navbar-brand" href="#"> Selamat Datang {{ Auth::user()->name }} </a>
+                     <a class="navbar-brand" href="{{ url('/home') }}"> Selamat Datang {{ Auth::user()->name }} </a>
                      <button href="{{ route('logout') }}" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                          <span class="navbar-toggler-bar burger-lines"></span>
                          <span class="navbar-toggler-bar burger-lines"></span>
