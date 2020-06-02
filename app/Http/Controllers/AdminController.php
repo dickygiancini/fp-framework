@@ -200,4 +200,10 @@ class AdminController extends Controller
        ///alihkan halaman ke halaman adminfilm.blade.php 
        return redirect('/adminfilm'); 
     }
+
+    public function pemesanan()
+    {
+        
+        return view('pemesanan');
+    }
 }

@@ -78,7 +78,7 @@
                     <li class="menu-title"></li><!-- /.menu-title -->
                     
                     <li class="">
-                        <a href="#"> <i class="menu-icon fa fa-table"></i>Pemesanan</a>
+                        <a href="/pemesanan"> <i class="menu-icon fa fa-table"></i>Pemesanan</a>
                        
                     </li>
                     <li class="menu-item-has-children dropdown">
