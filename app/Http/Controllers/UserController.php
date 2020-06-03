@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function kursi()
     {
-       
+        
         return view('kursi');
     }
 }
