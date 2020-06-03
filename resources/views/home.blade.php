@@ -7,8 +7,11 @@
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="box-title mb-3">Film yang sedang Tayang</h4>
+                                <center><h4 class="box-title mb-3">Film yang sedang Tayang</h4></center>
+                                    
                                     @foreach ($film as $data_film)
+                                    <form class="row" action="/adminfilm/update/{{ $data_film->id }}" method="post" enctype="multipart/form-data">
+                                    
                                       <div class="container">
                                         <div class="row justify-content-md-center">
                                             <div class="col col-md-7 col-sm-7 col-xs-7">
@@ -23,7 +26,7 @@
                                                 </div>
                                                 <tr>
                                                 <th colspan="2">
-                                                    <a class="btn btn-primary" href="">Pilih</a>
+                                                    <a class="btn btn-primary" href="/editpesan/{{ $data_film->id }}">Pilih</a>
                                                 </td>
                                               </tr>
                                                 </center>
@@ -31,7 +34,9 @@
                                             </div>
                                           </div>
                                       </div>
+                                      </form>
                                     @endforeach
+                                    
                                 </div>
                             </div> <!-- /.card -->
                         </div>  <!-- /.col-lg-12 -->

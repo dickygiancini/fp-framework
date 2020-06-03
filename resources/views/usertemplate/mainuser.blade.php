@@ -49,7 +49,7 @@
                      </a>
                  </div>
                  <ul class="nav">
-                     <li class="nav-item active">
+                     <li class="nav-item">
                          <a class="nav-link" href="{{ url('/home') }}">
                              <i class="nc-icon nc-chart-pie-35"></i>
                              <p>Home</p>
@@ -58,7 +58,7 @@
                      <li>
                          <a class="nav-link" href="{{ url('/pesan') }}">
                              <i class="nc-icon nc-chart-pie-35"></i>
-                             <p>Pesanan</p>
+                             <p>Pesan</p>
                          </a>
                      </li>
                      <li>

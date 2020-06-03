@@ -34,8 +34,6 @@
                                             
                                                 <tr>
                                                     <td class="serial"></td>
-                                                   
-                                                   
                                                     <td>  <span class="name"></span> </td>
                                                     <td> <span class="product"></span> </td>
                                                     <td><span class="time"></span></td>
@@ -54,6 +52,7 @@
                         
                     </div>
                 </div>
+                
                 <!-- /.orders -->
                
         <!-- /.content -->

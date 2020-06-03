@@ -61,8 +61,12 @@ Route::get('/test', function(){
     Artisan::call('db:seed');
 });
 
+//user
 Route::get('/dashboard', 'HomeController@dashboard');
-Route::get('/pesan', 'HomeController@pesan');
+Route::get('/editpesan/{id}', 'UserController@editpesan');
+Route::post('/tambah/{id}', 'UserController@pesan');
+Route::get('/pesanan', 'UserController@pesanan');
+
 Route::get('/userprofile', 'HomeController@userprofile');
 
 //admin
@@ -78,5 +82,3 @@ Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
 Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
 Route::get('/pemesanan', 'AdminController@pemesanan');
 Route::get('/kursi', 'UserController@kursi');
-
-//user
