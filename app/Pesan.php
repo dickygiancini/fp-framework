@@ -8,5 +8,10 @@ class Pesan extends Model
 {
     protected $table = "pesan";
  
-    protected $fillable = ['id', 'nama_film', 'tanggal', 'jam', 'jumlah', ];
+    protected $fillable = ['nama_film', 'tanggal', 'jumlah', 'harga', ];
+
+    public function Studio()
+    {
+    	return $this->belongsToMany('App\Studio');
+    }
 }

@@ -15,6 +15,14 @@ class CreatePesanTable extends Migration
     {
         Schema::create('pesan', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_film');
+            $table->date('tanggal');
+            $table->date('jam');
+            $table->integer('studio_id');
+            $table->string('kursi');
+            $table->integer('jumlah');
+            $table->integer('harga');
+            $table->integer('total');
             $table->timestamps();
         });
     }

@@ -46,10 +46,18 @@ class AdminController extends Controller
         return redirect('/adminuser');
     }
 
+    public function dashboard()
+    {
+        //mengambil data dari tabel film
+        $film = Film::all();
+        //mengirim data ke view adminuser.blade.php
+        return view('homeadm', ['film' => $film]);
+    }
+
     public function adminfilm()
     {
         //mengambil data dari tabel film
-        $film = Film::get();
+        $film = Film::all();
         //mengirim data ke view adminuser.blade.php
         return view('adminfilm', ['film' => $film]);
     }
@@ -120,6 +128,8 @@ class AdminController extends Controller
         $film->poster = $request->input('poster');
         $film->overview = $request->input('overview');
         $film->jam = $request->input('jam');
+        $film->harga = $request->input('harga');
+        $film->studio_id = $request->input('studio_id');
 
         if($request->hasFile('poster')){
             $file = $request->file('poster');
@@ -171,6 +181,8 @@ class AdminController extends Controller
             'poster' => $request->poster,
             'overview' => $request->overview,
             'jam' => $request->jam,
+            'harga' => $request->harga,
+            'studio_id' => $request->studio_id,
         ]);
 
         $film = Film::find($id);

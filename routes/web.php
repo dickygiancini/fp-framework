@@ -54,7 +54,7 @@ Route::get('/logoutadmin', 'LoginAdminController@LogoutAdmin' );
 
 Route::get('/list', 'ListController@index')->name('movies.index');
 Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
-Route::get('/homeadm', 'HomeController@homeadm');
+Route::get('/homeadm', 'AdminController@dashboard');
 
 Route::get('/test', function(){
     Artisan::call('migrate');
@@ -64,8 +64,8 @@ Route::get('/test', function(){
 //user
 Route::get('/dashboard', 'HomeController@dashboard');
 Route::get('/editpesan/{id}', 'UserController@editpesan');
-Route::post('/tambah/{id}', 'UserController@pesan');
-Route::get('/pesanan', 'UserController@pesanan');
+Route::post('/pesan/{id}', 'UserController@pesan');
+
 
 Route::get('/userprofile', 'HomeController@userprofile');
 
@@ -80,5 +80,7 @@ Route::post('/adminfilm', 'AdminController@tambahfilm');
 Route::get('/adminfilm/edit/{id}', 'AdminController@editfilm');
 Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
 Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
-Route::get('/pemesanan', 'AdminController@pemesanan');
+Route::get('/pemesanan', 'UserController@pesanan');
 Route::get('/kursi', 'UserController@kursi');
+// Route::get('/pesanan', 'UserController@pesanan');
+

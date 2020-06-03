@@ -37,7 +37,7 @@
                                                     <input type="time" class="form-control" name="jam" value="{{ $data_film->jam }}" placeholder="Jam" required>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group mt-3">
                                                     <a class="btn btn-secondary" href="/adminfilm">Kembali</a>
                                                     <button type="submit" class="btn btn-primary">Simpan</button>                                                
                                                 </div>

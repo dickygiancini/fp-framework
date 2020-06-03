@@ -14,35 +14,32 @@
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="box-title">Nampilin Movie sama jadwal Jadwal Tayang coba disini</h4>
+                                    <h4 class="box-title">Film yang sedang Tayang</h4>
                                 </div>
                                 <div class="card-body--">
                                     <div class="table-stats order-table ov-h">
                                         <table class="table ">
                                             <thead>
                                                 <tr>
-                                                    
-                                                    
                                                     <th>ID</th>
                                                     <th>Nama Film</th>
-                                                    <th>Tanggal</th>
                                                     <th>Waktu</th>
-                                                    <th>Status</th>
+                                                    <th>Harga</th>
                                                 </tr>
                                             </thead>
+
+                                            @foreach ($film as $data_film)
                                             <tbody>
                                             
                                                 <tr>
-                                                    <td class="serial"></td>
-                                                    <td>  <span class="name"></span> </td>
-                                                    <td> <span class="product"></span> </td>
-                                                    <td><span class="time"></span></td>
-                                                    <td>
-                                                     
-                                                    </td>
+                                                    <td>{{ $data_film->id }}</td>
+                                                    <td>{{ $data_film->judul_film }}</td>
+                                                    <td>{{ $data_film->jam }}</td>
+                                                    <td>{{ $data_film->harga }}</td>
                                                 </tr>
                                             
                                             </tbody>
+                                            @endforeach
                                         </table>
                                     </div> <!-- /.table-stats -->
                                 </div>

@@ -19,6 +19,8 @@ class CreateFilmTable extends Migration
             $table->string('poster');
             $table->string('overview');
             $table->time('jam');
+            $table->integer('harga');
+            $table->integer('studio_id');
             $table->timestamps();
         });
     }
