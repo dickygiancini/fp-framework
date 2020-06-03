@@ -1,4 +1,4 @@
-@extends('admintemplate.mainadminedituser')
+@extends('usertemplate.mainuser')
 
 @section('bodysec')    
                   <!-- Orders -->

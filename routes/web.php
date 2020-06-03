@@ -82,5 +82,6 @@ Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
 Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
 Route::get('/pemesanan', 'UserController@pesanan');
 Route::get('/kursi', 'UserController@kursi');
-// Route::get('/pesanan', 'UserController@pesanan');
+Route::get('/pemesanan', 'UserController@pesanan');
+Route::get('/pesanan', 'UserController@pesanann');
 
