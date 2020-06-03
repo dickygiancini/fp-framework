@@ -73,7 +73,7 @@ class UserController extends Controller
         
  
     	// mengirim data pegawai ke view index
-        return redirect('/pesanan');
+        return redirect('/home');
         
         // // alihkan halaman ke halaman home
         // return redirect('/pesanan');
