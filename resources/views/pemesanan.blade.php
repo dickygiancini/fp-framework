@@ -22,6 +22,7 @@
                                                     <th>Jumlah</th>
                                                     <th>Harga</th>
                                                     <th>Status</th>
+                                                    <th>Opsi</th>
                                                 </tr>
                                             </thead>
                                             @php
@@ -38,6 +39,9 @@
                                                     <td>{{ $data_pesan->jumlah }}</td>
                                                     <td>{{ $data_pesan->harga }}</td>
                                                     <td class="badge badge-complete">Sudah Bayar</td>
+                                                    <td>
+                                                        <a class="badge badge-pending" href="/pemesanan/hapus/{{ $data_pesan->id }}">Hapus</a>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                             @endforeach 

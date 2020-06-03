@@ -38,6 +38,10 @@
                                                 </div>
 
                                                 <div class="form-group mt-3">
+                                                    <input type="number" class="form-control" name="harga" value="{{ $data_film->harga }}" placeholder="harga" required>
+                                                </div>
+
+                                                <div class="form-group mt-3">
                                                     <a class="btn btn-secondary" href="/adminfilm">Kembali</a>
                                                     <button type="submit" class="btn btn-primary">Simpan</button>                                                
                                                 </div>

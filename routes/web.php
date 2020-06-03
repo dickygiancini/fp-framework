@@ -65,6 +65,7 @@ Route::get('/test', function(){
 Route::get('/dashboard', 'HomeController@dashboard');
 Route::get('/editpesan/{id}', 'UserController@editpesan');
 Route::post('/pesan/{id}', 'UserController@pesan');
+Route::get('/kursi', 'UserController@kursi');
 
 
 Route::get('/userprofile', 'HomeController@userprofile');
@@ -80,7 +81,18 @@ Route::post('/adminfilm', 'AdminController@tambahfilm');
 Route::get('/adminfilm/edit/{id}', 'AdminController@editfilm');
 Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
 Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
-Route::get('/pemesanan', 'UserController@pesanan');
-Route::get('/kursi', 'UserController@kursi');
+
+Route::get('/pemesanan', 'AdminController@pemesanan');
+Route::get('/pemesanan/hapus/{id}', 'AdminController@hapuspemesanan');
+
+Route::get('/adminkursi', 'AdminController@kursi');
+
+Route::get('/adminstudio', 'AdminController@studio');
+Route::post('/adminstudio', 'AdminController@tambahstudio');
+Route::get('/adminstudio/edit/{id}', 'AdminController@editstudio');
+Route::post('/adminstudio/update/{id}', 'AdminController@updatestudio');
+Route::get('/adminstudio/hapus/{id}', 'AdminController@hapusstudio');
+
+
 // Route::get('/pesanan', 'UserController@pesanan');
 

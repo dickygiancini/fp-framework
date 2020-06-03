@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //untuk menjalankan query builder
 use App\Film;
+use App\Studio;
+use App\Pesan;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -124,7 +126,7 @@ class AdminController extends Controller
             'overview' => $request->overview,
             'jam' => $request->jam,
             'harga' => $request->harga,
-            'studio_id' => $request->studio_id,
+            // 'studio_id' => $request->studio_id,
         ]);
 
         $film = Film::find($id);
@@ -156,8 +158,68 @@ class AdminController extends Controller
     }
 
     public function pemesanan()
-    {
-        
-        return view('pemesanan');
+    {  
+        $pesan = Pesan::get();
+        //mengirim data ke view adminuser.blade.php
+        return view('pemesanan', ['pesan' => $pesan]);
     }
+
+    public function hapuspemesanan($id)
+    {
+        $pesan = DB::table('pesan')->where('id', $id)->delete();
+        ///alihkan halaman ke halaman adminfilm.blade.php 
+        return redirect('/pemesanan'); 
+    }
+
+    public function studio()
+    {
+       //mengambil data dari tabel studio
+       $studio = DB::table('studio')->get();
+       //mengirim data ke view adminuser.blade.php
+       return view('adminstudio', ['studio' => $studio]);
+    }
+
+    public function tambahstudio(Request $request)
+    {
+        $pesan = DB::table('studio')->insert([
+            'film_id' => $request->film_id,
+            'nama_studio' => $request->nama_studio,
+        ]);
+
+        return redirect()->back();
+    }
+
+    public function editstudio($id)
+    {
+        $studio = DB::table('studio')->where('id', $id)->get();
+        //passing data film yang didapat ke view adminufilmedit.blade.php 
+        return view('adminstudioedit', ['studio' => $studio]);
+    }
+
+    public function updatestudio(Request $request, $id)
+    {
+        DB::table('studio')->where('id', $request->id)->update([
+            'film_id' => $request->film_id,
+            'nama_studio' => $request->nama_studio,
+        ]);
+
+        return redirect('/adminstudio');
+    }
+
+    public function hapusstudio($id)
+    {
+       //menghapus data dari tabel film berdasarkan id yang dipilih
+       $film = DB::table('studio')->where('id', $id)->delete();
+       ///alihkan halaman ke halaman adminfilm.blade.php 
+       return redirect('/adminstudio'); 
+    }
+
+    public function kursi()
+    {
+       
+        return view('adminkursi');
+    }
+
+
+
 }
