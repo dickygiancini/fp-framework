@@ -35,6 +35,10 @@
                                                         <td><h5 class="card-text mt-3 mb-3">{{ $data_film->jam }}</h5></td>
                                                       </tr>
                                                       <tr>
+                                                        <th><h5 class="card-title mt-3">Harga</h5></th>
+                                                        <td><h5 class="card-text mt-3 mb-3">{{ $data_film->harga }}</h5></td>
+                                                      </tr>
+                                                      <tr>
                                                         <th colspan="2">
                                                             <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Edit</a>
                                                             <a class="btn btn-danger" href="/adminfilm/hapus/{{ $data_film->id }}">Hapus</a>
@@ -42,20 +46,6 @@
                                                       </tr>
                                                     </tbody>
                                                   </table>
-
-                                                  
-                                                {{-- <h5 class="card-title mt-3">Judul Film</h5>
-                                                <h5 class="card-title mt-3">{{ $data_film->judul_film }}</h5>
-                                                
-                                                <h5 class="card-title mt-3">Overview</h5>
-                                                <h5 class="card-text mt-3 mb-3">{{ $data_film->overview }}</h5>
-
-                                                <h5 class="card-title mt-3">Jam Mulai</h5>
-                                                <h5 class="card-text mt-3 mb-3">{{ $data_film->jam }}</h5>
-                                                
-                                                <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Edit</a>
-                                                <a class="btn btn-danger" href="/adminfilm/hapus/{{ $data_film->id }}">Hapus</a> --}}
-                                            
 
                                             </div>
                                         </div>
@@ -106,6 +96,11 @@
                                                                 <h5 class="card-text mt-3">Jam</h5>
                                                                 <div class="form-group mt-3">
                                                                     <input type="time" class="form-control" name="jam" placeholder="Jam" id="myTime" required>
+                                                                </div>
+
+                                                                <h5 class="card-text mt-3">Harga</h5>
+                                                                <div class="form-group mt-3">
+                                                                    <input type="text" class="form-control" name="harga" placeholder="Harga" required>
                                                                 </div>
                 
                                                                 <div class="form-group">

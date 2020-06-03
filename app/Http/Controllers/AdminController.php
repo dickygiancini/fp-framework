@@ -5,10 +5,60 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //untuk menjalankan query builder
 use App\Film;
+use App\Studio;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
+    public function adminstudio()
+    {
+        //mengambil data dari tabel studio
+        $studio = DB::table('studio')->get();
+        //mengirim data ke view adminstudio.blade.php
+        return view('adminstudio', ['studio' => $studio]);
+    }
+
+    public function tambahstudio(Request $request)
+    {
+
+        $Studio = new Studio();
+
+        $Studio->film_id = $request->input('film_id');
+        $Studio->nama_studio = $request->input('nama_studio');
+
+        $Studio->save();
+        return redirect()->back();
+    }
+
+    public function editstudio($id)
+    {
+        $studio = DB::table('studio')->where('id', $id)->get();
+        return view('adminstudioedit', ['studio' => $studio]);
+    }
+
+    public function updatestudio(Request $request, $id)
+    {
+        DB::table('studio')->where('id', $request->id)->update([
+            'film_id' => $request->film_id,
+            'nama_studio' => $request->nama_studio,
+        ]);
+
+        $studio = Studio::find($id);
+
+        $studio->save();
+
+        return redirect('/adminstudio');
+        
+    }
+
+    public function hapusstudio($id)
+    {
+       //menghapus data dari tabel film berdasarkan id yang dipilih
+       $studio = DB::table('studio')->where('id', $id)->delete();
+       ///alihkan halaman ke halaman adminfilm.blade.php 
+       return redirect('/adminstudio'); 
+    }
+
     public function adminuser()
     {
         //mengambil data dari tabel users
@@ -120,6 +170,7 @@ class AdminController extends Controller
         $film->poster = $request->input('poster');
         $film->overview = $request->input('overview');
         $film->jam = $request->input('jam');
+        $film->harga = $request->input('harga');
 
         if($request->hasFile('poster')){
             $file = $request->file('poster');
@@ -171,6 +222,7 @@ class AdminController extends Controller
             'poster' => $request->poster,
             'overview' => $request->overview,
             'jam' => $request->jam,
+            'harga' => $request->harga,
         ]);
 
         $film = Film::find($id);

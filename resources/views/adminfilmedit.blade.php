@@ -38,6 +38,10 @@
                                                 </div>
 
                                                 <div class="form-group">
+                                                    <input type="text" class="form-control" name="harga" value="{{ $data_film->harga }}" placeholder="Harga" required>
+                                                </div>
+
+                                                <div class="form-group">
                                                     <a class="btn btn-secondary" href="/adminfilm">Kembali</a>
                                                     <button type="submit" class="btn btn-primary">Simpan</button>                                                
                                                 </div>
