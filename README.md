@@ -18,10 +18,11 @@ Solusi Error :
 3. Copy : TMDB_TOKEN = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MmZlMjhjNmQwY2NjZjcxNDUzZWU4ZWFjZjQxYTk5NyIsInN1YiI6IjVlOWM0NDFmMzEwMzI1MDAxYWM4NzQxMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ucO0GMirauuE_Yk9qcEnBWIuRSwdGO4eIJq7VTqBl3I
 
 dan masukkan ke dalam file .env
-4. Buka terminal sesuai direktori clone
-5. Lakukan : composer update
-6. jalankan "php artisan serve"
-7. jalankan "php artisan migrate"
+<br>
+4. Buka terminal sesuai direktori clone<br>
+5. Lakukan : composer update<br>
+6. jalankan "php artisan serve"<br>
+7. jalankan "php artisan migrate"<br>
 
 Jika menjadi user :
 jalankan url (/login) dengan ketentuan setelah melakukan login dan telah memiliki akun.
