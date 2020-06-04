@@ -86,7 +86,7 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="active menu-icon fa fa-line-chart"></i><a href="/adminfilm">Daftar Film</a></li>
                             <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Kursi</a></li>
-                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Studio</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="/adminstudio">Studio</a></li>
                         </ul>
                     </li>
                     <li class="">

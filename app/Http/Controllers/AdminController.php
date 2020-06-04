@@ -5,10 +5,59 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //untuk menjalankan query builder
 use App\Film;
+use App\Studio;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
+    public function adminstudio()
+    {
+        //mengambil data dari tabel studio
+        $studio = DB::table('studio')->get();
+        //mengirim data ke view adminstudio.blade.php
+        return view('adminstudio', ['studio' => $studio]);
+    }
+
+    public function tambahstudio(Request $request)
+    {
+
+        $Studio = new Studio();
+
+        $Studio->film_id = $request->input('film_id');
+        $Studio->nama_studio = $request->input('nama_studio');
+
+        $Studio->save();
+        return redirect()->back();
+    }
+
+    public function editstudio($id)
+    {
+        $studio = DB::table('studio')->where('id', $id)->get();
+        return view('adminstudioedit', ['studio' => $studio]);
+    }
+
+    public function updatestudio(Request $request, $id)
+    {
+        DB::table('studio')->where('id', $request->id)->update([
+            'nama_studio' => $request->nama_studio,
+        ]);
+
+        $studio = Studio::find($id);
+
+        $studio->save();
+
+        return redirect('/adminstudio');
+        
+    }
+
+    public function hapusstudio($id)
+    {
+       //menghapus data dari tabel film berdasarkan id yang dipilih
+       $studio = DB::table('studio')->where('id', $id)->delete();
+       ///alihkan halaman ke halaman adminfilm.blade.php 
+       return redirect('/adminstudio'); 
+    }
+
     public function adminuser()
     {
         //mengambil data dari tabel users
@@ -122,6 +171,7 @@ class AdminController extends Controller
 
         // ]);
 
+        //memasukkan kedalam tabel film
         $film = new Film();
 
         $film->judul_film = $request->input('judul_film');
@@ -129,7 +179,6 @@ class AdminController extends Controller
         $film->overview = $request->input('overview');
         $film->jam = $request->input('jam');
         $film->harga = $request->input('harga');
-        $film->studio_id = $request->input('studio_id');
 
         if($request->hasFile('poster')){
             $file = $request->file('poster');
@@ -143,6 +192,24 @@ class AdminController extends Controller
         }
 
         $film->save();
+
+        //memasukkan kedalam tabel studio
+        //mengambil id studio yang sama dengan id input
+        $studio = DB::table('studio')->where('id', $request->input('studio_id'))->get();
+        //mengambil nama film yang sama dnegan nama input
+        $nama = DB::table('film')->where('judul_film', $request->input('judul_film'))->get();
+
+        //iterate studio
+        foreach ($studio as $studio){
+        $studio1 = new studio();
+            //iterate film
+            foreach ($nama as $nama){
+                $studio1->film_id = $nama->id;
+            }
+        $studio1->nama_studio = $studio->nama_studio;
+    
+        $studio1->save();
+        }
 
 
 
@@ -207,7 +274,8 @@ class AdminController extends Controller
 
     public function hapusfilm($id)
     {
-       //menghapus data dari tabel film berdasarkan id yang dipilih
+       //menghapus data dari tabel film berdasarkan id yang dipilih   
+       $studio = DB::table('studio')->where('film_id', $id)->delete();
        $film = DB::table('film')->where('id', $id)->delete();
        ///alihkan halaman ke halaman adminfilm.blade.php 
        return redirect('/adminfilm'); 
