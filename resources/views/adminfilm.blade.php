@@ -115,9 +115,14 @@
                                                                     <input type="time" class="form-control" name="jam" placeholder="Jam" id="myTime" required>
                                                                 </div>
 
-                                                                <h5 class="card-text mt-3">Harga</h5>
+                                                                <h5 class="card-text mt-3">Hargas</h5>
                                                                 <div class="form-group mt-3">
                                                                     <input type="number" class="form-control" name="harga" placeholder="harga"  required>
+                                                                </div>
+                                                                
+                                                                <h5 class="card-text mt-3">Studio</h5>
+                                                                <div class="form-group mt-3">
+                                                                    <input type="number" class="form-control" name="studio_id" placeholder="Studio"  required>
                                                                 </div>
                                                                 
                                                                 <div class="form-group mt-3">
