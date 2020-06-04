@@ -81,7 +81,7 @@
                                               </tr>
                                               <tr>
                                                 <th colspan="2">
-                                                    <a class="btn btn-primary" href="">Pilih</a>
+                                                    <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Pesan</a>
                                                 </td>
                                               </tr>
                                             </tbody>

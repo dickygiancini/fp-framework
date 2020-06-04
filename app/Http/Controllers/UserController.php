@@ -94,6 +94,21 @@ class UserController extends Controller
         //mengirim data ke view adminuser.blade.php
         return view('pemesanan', ['pesan' => $pesan]);
     }
+
+    public function pesanann()
+    {
+        // $pesan = DB::table('pesan')->get();
+        // //mengambil data dari tabel film berdasarkan id yang dipilih
+        // // $pesan = DB::table('pesan')->where('id', $id)->get();
+        // //passing data film yang didapat ke view adminuseredit.blade.php 
+        // return view('pesanan',['pesan' => $pesan]);
+
+
+        // $pesan = DB::table('pesan')->get();
+        $pesan = Pesan::get();
+        //mengirim data ke view adminuser.blade.php
+        return view('pesanan', ['pesan' => $pesan]);
+    }
 }
 
 //yang itu aku nggak paham, dapet dari admin control punyamu

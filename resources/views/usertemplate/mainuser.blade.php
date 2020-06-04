@@ -56,15 +56,9 @@
                          </a>
                      </li>
                      <li>
-                         <a class="nav-link" href="{{ url('/pesan') }}">
+                         <a class="nav-link" href="{{ url('/pesanan') }}">
                              <i class="nc-icon nc-chart-pie-35"></i>
                              <p>Pesan</p>
-                         </a>
-                     </li>
-                     <li>
-                         <a class="nav-link" href="/userprofile">
-                             <i class="nc-icon nc-circle-09"></i>
-                             <p>User Profile</p>
                          </a>
                      </li>
                  </ul>

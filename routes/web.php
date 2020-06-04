@@ -76,6 +76,12 @@ Route::get('/adminuser/edit/{id}', 'AdminController@edituser');
 Route::post('/adminuser/update', 'AdminController@updateuser');
 Route::get('/adminuser/hapus/{id}', 'AdminController@hapususer');
 
+//adminstudio
+Route::get('/adminstudio', 'AdminController@adminstudio');
+Route::post('/adminstudio', 'AdminController@tambahstudio');
+Route::get('/adminstudio/edit/{id}', 'AdminController@editstudio');
+Route::post('/adminstudio/update/{id}', 'AdminController@updatestudio');
+
 Route::get('/adminfilm', 'AdminController@adminfilm');
 Route::post('/adminfilm', 'AdminController@tambahfilm');
 Route::get('/adminfilm/edit/{id}', 'AdminController@editfilm');
