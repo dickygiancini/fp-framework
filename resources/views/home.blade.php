@@ -7,7 +7,8 @@
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="box-title mb-3">Film yang sedang Tayang</h4>
+                                <center><h4 class="box-title mb-3">Film yang sedang Tayang</h4></center>
+                                    
                                     @foreach ($film as $data_film)
                                       <div class="container">
                                         <div class="row justify-content-md-center">
@@ -19,19 +20,23 @@
                                                   <div class="single-fasilitas-image"></div>
                                                 <div class="blog_details">
                                                 <p>{{ $data_film->overview }}</p>
-                                                  <p>Jam Tayang {{ $data_film->jam }}</p>
+                                                
+                                                  <p>Jam Tayang : {{ $data_film->jam }}</p>
+                                                  <p>Harga : {{ $data_film->harga }}</p>
+                                                  <p>Studio : {{ $data_film->studio->nama_studio }}</p>
                                                 </div>
-                                                <tr>
-                                                <th colspan="2">
-                                                    <a class="btn btn-primary" href="">Pilih</a>
-                                                </td>
-                                              </tr>
+                                                
+                                                    <a class="btn btn-primary" href="/editpesan/{{ $data_film->id }}">Pilih</a>
+
                                                 </center>
                                               </div>
                                             </div>
                                           </div>
                                       </div>
                                     @endforeach
+
+                                    
+                                    
                                 </div>
                             </div> <!-- /.card -->
                         </div>  <!-- /.col-lg-12 -->
@@ -76,7 +81,7 @@
                                               </tr>
                                               <tr>
                                                 <th colspan="2">
-                                                    <a class="btn btn-primary" href="">Pilih</a>
+                                                    <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Pesan</a>
                                                 </td>
                                               </tr>
                                             </tbody>

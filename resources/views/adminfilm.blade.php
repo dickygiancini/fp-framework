@@ -13,7 +13,6 @@
 
                                 @foreach ($film as $data_film)
                                     
-
                                         <div class="card ml-5" style="width: 18rem;">
                                             
                                             <div class="card-body">
@@ -35,6 +34,14 @@
                                                         <td><h5 class="card-text mt-3 mb-3">{{ $data_film->jam }}</h5></td>
                                                       </tr>
                                                       <tr>
+                                                        <th><h5 class="card-title mt-3">Harga</h5></th>
+                                                        <td><h5 class="card-text mt-3 mb-3">{{ $data_film->harga }}</h5></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th><h5 class="card-title mt-3">Studio</h5></th>
+                                                        <td><h5 class="card-text mt-3 mb-3">{{ $data_film->studio->nama_studio }}</h5></td>
+                                                      </tr>
+                                                      <tr>   
                                                         <th colspan="2">
                                                             <a class="btn btn-primary" href="/adminfilm/edit/{{ $data_film->id }}">Edit</a>
                                                             <a class="btn btn-danger" href="/adminfilm/hapus/{{ $data_film->id }}">Hapus</a>
@@ -107,8 +114,18 @@
                                                                 <div class="form-group mt-3">
                                                                     <input type="time" class="form-control" name="jam" placeholder="Jam" id="myTime" required>
                                                                 </div>
-                
-                                                                <div class="form-group">
+
+                                                                <h5 class="card-text mt-3">Hargas</h5>
+                                                                <div class="form-group mt-3">
+                                                                    <input type="number" class="form-control" name="harga" placeholder="harga"  required>
+                                                                </div>
+                                                                
+                                                                <h5 class="card-text mt-3">Studio</h5>
+                                                                <div class="form-group mt-3">
+                                                                    <input type="number" class="form-control" name="studio_id" placeholder="Studio"  required>
+                                                                </div>
+                                                                
+                                                                <div class="form-group mt-3">
                                                                     <button type="submit" value="submit" class="btn btn-success">Tambah</button>
                                                                 </div>
                 

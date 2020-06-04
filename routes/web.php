@@ -54,15 +54,20 @@ Route::get('/logoutadmin', 'LoginAdminController@LogoutAdmin' );
 
 Route::get('/list', 'ListController@index')->name('movies.index');
 Route::get('/list/{movie}', 'ListController@show')->name('movies.show');
-Route::get('/homeadm', 'HomeController@homeadm');
+Route::get('/homeadm', 'AdminController@dashboard');
 
 Route::get('/test', function(){
     Artisan::call('migrate');
     Artisan::call('db:seed');
 });
 
+//user
 Route::get('/dashboard', 'HomeController@dashboard');
-Route::get('/pesan', 'HomeController@pesan');
+Route::get('/editpesan/{id}', 'UserController@editpesan');
+Route::post('/pesan/{id}', 'UserController@pesan');
+Route::get('/kursi', 'UserController@kursi');
+
+
 Route::get('/userprofile', 'HomeController@userprofile');
 
 //admin
@@ -71,12 +76,29 @@ Route::get('/adminuser/edit/{id}', 'AdminController@edituser');
 Route::post('/adminuser/update', 'AdminController@updateuser');
 Route::get('/adminuser/hapus/{id}', 'AdminController@hapususer');
 
+//adminstudio
+Route::get('/adminstudio', 'AdminController@adminstudio');
+Route::post('/adminstudio', 'AdminController@tambahstudio');
+Route::get('/adminstudio/edit/{id}', 'AdminController@editstudio');
+Route::post('/adminstudio/update/{id}', 'AdminController@updatestudio');
+
 Route::get('/adminfilm', 'AdminController@adminfilm');
 Route::post('/adminfilm', 'AdminController@tambahfilm');
 Route::get('/adminfilm/edit/{id}', 'AdminController@editfilm');
 Route::post('/adminfilm/update/{id}', 'AdminController@updatefilm');
 Route::get('/adminfilm/hapus/{id}', 'AdminController@hapusfilm');
-Route::get('/pemesanan', 'AdminController@pemesanan');
-Route::get('/kursi', 'UserController@kursi');
 
-//user
+Route::get('/pemesanan', 'AdminController@pemesanan');
+Route::get('/pemesanan/hapus/{id}', 'AdminController@hapuspemesanan');
+
+Route::get('/adminkursi', 'AdminController@kursi');
+
+Route::get('/adminstudio', 'AdminController@studio');
+Route::post('/adminstudio', 'AdminController@tambahstudio');
+Route::get('/adminstudio/edit/{id}', 'AdminController@editstudio');
+Route::post('/adminstudio/update/{id}', 'AdminController@updatestudio');
+Route::get('/adminstudio/hapus/{id}', 'AdminController@hapusstudio');
+
+
+// Route::get('/pesanan', 'UserController@pesanan');
+
