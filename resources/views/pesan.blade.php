@@ -43,27 +43,21 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="#" class="simple-text">
-                        Dashboard Bioskop
+                    <a href="{{ url('/home') }}" class="simple-text">
+                        Dashboard {{ Auth::user()->name }}
                     </a>
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ url('/home') }}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ url('/pesan') }}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Pesan</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">
-                            <i class="nc-icon nc-circle-09"></i>
-                            <p>User Profile</p>
                         </a>
                     </li>
                 </ul>
@@ -90,7 +84,7 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Log out</span>
+                                    <span class="no-icon"><a href="{{ route('logout') }}">Log out</a></span>
                                 </a>
                             </li>
                         </ul>
@@ -122,7 +116,8 @@
                                 <label>Jumlah Tiket</label>
                                 <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jumlah">
                             </div>
-                            <button type="submit" class="btn btn-primary">Pesan</button>
+                            {{-- <button type="submit" class="btn btn-primary">Pesan</button> --}}
+                            <a href="/pesandone">Pesan</a>
                         </form>
                     </div>
                 </div>

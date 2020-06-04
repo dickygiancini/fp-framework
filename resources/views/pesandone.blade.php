@@ -85,20 +85,11 @@
             <!-- End Navbar -->
             <div class="content">
                 <div class="container-fluid">
-                    <div class="card-title">
-                        <h4>Now Playing - Book at Pesan</h4>
-                    </div>
-                    <div class="row">
-                        @foreach ($nowPlayingMovies as $listMovies)
-                            <div class="col-lg-3 col-md-6">
-                                <img class="img-fluid" src="{{ 'https://image.tmdb.org/t/p/w500/'.$listMovies['poster_path'] }}" alt="poster">
-                                <h4 class="text-center">{{ $listMovies['title'] }}</h4>
-                            </div>
-                        @break;
-                        @endforeach
-                    </div>
-                    <div class="row">
 
+                    <div class="row">
+                        <div class="row">
+                            <h4>Pesanan anda selesai, kode anda adalah : <?php echo(rand() . "<br>"); ?></h4>
+                        </div>                        
                     </div>
                 </div>
             </div>

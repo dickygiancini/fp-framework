@@ -32,9 +32,9 @@ Route::post('/register', 'AuthController@postRegister')->middleware('guest');
 //     return view('home');
 // })->middleware('auth')->name('home');
 
-Route::get('/home', 'UserHomeController@index')->middleware('auth')->name('home.index');
+Route::get('/home', 'UserHomeController@index')->middleware('auth')->name('home');
 Route::get('/pesan', 'UserHomeController@pesan');
-
+Route::get('/pesandone', 'UserHomeController@pesandone');
 Route::get('logout', 'AuthController@logout')->middleware('auth')->name('logout');
 
 Route::get('/homeadmin', function() {

@@ -110,6 +110,11 @@ class UserHomeController extends Controller
     {
         return view('pesan');
     }
+
+    public function pesandone()
+    {
+        return view('pesandone');
+    }
     public function kursi()
     {
         return view('kursi');
