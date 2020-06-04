@@ -9,13 +9,12 @@ Anggota Kelompok :
 
 Cara menjalankan project:
 1. Clone project pada lokal direktori
-2. pada terminal arahkan ke folder project yang telah di clode, jalankan "php artisan serve"
+2. pada terminal arahkan ke folder project yang telah di clode, jalankan "composer update"
 3. jalankan "php artisan migrate"
+4. jalankan "php artisan serve"
 
 Jika menjadi user :
 jalankan url (/login) dengan ketentuan setelah melakukan login dan telah memiliki akun.
 
 Jika menjadi admin :
-jalankan url (/loginadmin) dengan email:admin@admin.com password:12345
-
-Thanks to https://stackoverflow.com/
+jalankan url (/loginadmin) dengan email:admin@admin.com password:password
